@@ -1,28 +1,18 @@
 <template>
   <div class="container">
-    <HelloWorld>
-    </HelloWorld>
-    <div class="message-box">
-      <p>{{ message || '等待加载...' }}</p>
-      <button 
-        @click="fetchMessage" 
-        :disabled="isLoading" 
-        :class="{ loading: isLoading }"
-        type="button"
-        aria-label="刷新消息"
-      >
-        {{ isLoading ? '加载中...' : '刷新消息' }}
-      </button>
-    </div>
+    <BannerAndNav>
+      
+    </BannerAndNav>
   </div>
 </template>
 
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BannerAndNav from './components/BannerAndNav.vue'
+import { ref } from 'vue'
+import { defineProps } from 'vue'
 export default {
   components: {
-    HelloWorld
+    BannerAndNav
   },
   data() {
     return {
